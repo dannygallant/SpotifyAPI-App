@@ -1,0 +1,5 @@
+- Consider using templates like in the Stackoverflow rep builder to present the artist, album, link to the preview (30s), link that opens the song in Spotify, and maybe something else.
+
+- Side nav will be Spotify's green and main will be black or dark grey.
+
+- Search results will list all artists that match the search. This results list will be links to the individual artists. Clicking a link will pull up that artists top songs, with links to preview and play in Spotify
