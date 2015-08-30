@@ -34,82 +34,55 @@ button:hover, .button:hover {
 	background-color: black;
 }
 
+
 /* ========= Nav bar styling ========= */
 
-.top-bar {
-  text-align: center;
+
+/* ==== Main styling ==== */
+
+.container {
+  margin: 3em auto;
+  width: 600px;
 }
 
-ul.center {
-  display: inline-block;
-  @media only screen and (min-width: 40.063em) {
-    margin-left: -4rem;
-  }
+.hidden {
+  display: none;
 }
 
-@media only screen and (min-width: 40.063em) {
-  .top-bar {
-    background: #567;
-  }
-  .top-bar-section li:not(.has-form) a:not(.button) {
-    background: #567;
-    color: #fff;
-  }
+.left {
+  float: left;
 }
 
-.logo {
-  max-width: 4rem;
+.stack-image {
+  background: url('images/stack-icon.png') no-repeat center center;
+  width: 200px;
+  height: 200px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-right: 1em;
+  border-radius: 5px;
 }
 
-
-/* =========  App-specific styling  ========= */
-#questionContainer {
-	display: none;
+.intro {
+  margin-bottom: 1em;
+}
+.stack {
+  clear: both;
 }
 
-#submit_answer {
-	display: none;
+.inspiration { 
+  margin-left: 3em;
 }
 
-#info {
-	display: none;
+.result {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0 auto 1em auto;
 }
 
-#results {
-	display: none;
+.error {
+  background-color: #F78181;
+  padding: 1em;
 }
-
-#next_question {
-	display: none;
-}
-
-#copyright {
-	display: none;
-}
-
-#game_over {
-	display: none;
-}
-
-.button {
-	background-color: #567;
-}
-
-#results p {
-	color: #567;
-	font-weight: bold;
-}
-
-#copyright p {
-	font-size: 7;
-}
-
-.footer p {
-	display: inline;
-	font-size: 12px;
-}
-
-#missingAnswerModal h2 {
-	color: red;
-}
-

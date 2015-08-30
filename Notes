@@ -3,3 +3,8 @@
 - Side nav will be Spotify's green and main will be black or dark grey.
 
 - Search results will list all artists that match the search. This results list will be links to the individual artists. Clicking a link will pull up that artists top songs, with links to preview and play in Spotify
+
+
+Function that sends AJAX call for artist search results. 
+ -> Each result is a link that runs a 'topSongs' function, which runs another AJAX call and displays results to the user. 
+    -> Each result will give the artist name, album the song is on, a link to the song preview and a link to the full song (will require spotify login by the user)

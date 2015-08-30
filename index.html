@@ -14,27 +14,89 @@
 
 <body>
 
-<br><br><br>
+<!-- <ul class="side-nav" role="navigation" title="Link List">
+      <li role="menuitem"><a href="#">Search</a></li>
+      <li role="menuitem"><a href="#">Link 2</a></li>
+      <li role="menuitem"><a href="#">Link 3</a></li>
+      <li role="menuitem"><a href="#">Link 4</a></li>
+</ul> -->
 
-<form id="search-term">
-	<div class="row">
-    <div class="large-12 columns">
-      <div class="row collapse">
-        <div class="small-10 columns">
-          <input type="text" id="query" placeholder="Search">
-        </div>
-        <div class="small-2 columns">
-          <a href="#" id="searchButton" class="button postfix">Submit</a>
+<nav class="left-off-canvas-menu">
+  <a href="">Search</a>
+
+</nav>
+
+
+
+<!-- <div class="row">
+  <div class="small-2 columns">
+    
+  </div> -->
+  <div class="small-12 columns">
+
+    <form id="search-term">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              <input type="text" id="query" required placeholder="Search">
+            </div>
+            <div class="small-2 columns">
+              <a href="#" id="searchButton" class="button postfix">Submit</a>
+            </div>
+          </div>
         </div>
       </div>
+    </form>
+    <br><br>
+    <div id="search-results"></div>
+  </div>
+
+<!-- </div> -->
+
+<br><br><br>
+
+
+
+
+
+<!-- FROM STACKOVERFLOW REP BUILDER -->
+
+<div class="templates hidden">
+    <dl class="artistResults">
+      <dt>Artist</dt>
+        <dd class="artistName"><a href="" target="_blank"></a></dd>
+    </dl>
+
+    <dl class="topTracks">
+      <dt>Artist</dt>
+        <dd class="artistName"><a href="" target="_blank"></a></dd>
+      <dt>Album</dt>
+        <dd class="album"></dd>
+      <dt>Song Preview</dt>
+        <dd class="preview"></dd>
+      <dt>Full Song (requires Spotify login)</dt>
+        <dd class="fullSong"></dd>
+    </dl>
+    
+
+    <!-- Probably won't need this -->
+    <!-- New template for the Top Answers functionality -->
+    <dl class="result topAnswers">
+      <dt>User</dt>
+        <dd class="user"><a href="" target="_blank"></a></dd>
+                <dd><a href="" target="_blank"></a></dd>
+      <dt>Post Count</dt>
+        <dd class="post-count"></dd>
+      <dt>Score</dt>
+        <dd class="score"></dd>
+    </dl>
+    <div class="error">
+      <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
     </div>
   </div>
-</form>
 
-<div id="search-results">
-</div>
-
-
+<!-- FROM STACKOVERFLOW REP BUILDER -->
 
 	<script src="js/vendor/jquery.js" type="text/javascript"></script>
 	<script src="apps/app.js"></script> 
