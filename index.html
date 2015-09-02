@@ -8,30 +8,51 @@
   	<link rel="stylesheet" href="css/foundation.css" />
     <!-- app.css is used to overide styling from foundation.css -->
   	<link rel="stylesheet" href="css/app.css">
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
     
 </head>
 
 
 <body>
 
-<!-- <ul class="side-nav" role="navigation" title="Link List">
-      <li role="menuitem"><a href="#">Search</a></li>
-      <li role="menuitem"><a href="#">Link 2</a></li>
-      <li role="menuitem"><a href="#">Link 3</a></li>
-      <li role="menuitem"><a href="#">Link 4</a></li>
-</ul> -->
-
-<nav class="left-off-canvas-menu">
-  <a href="">Search</a>
-
-</nav>
 
 
+<div class="off-canvas-wrap move-right" data-offcanvas>
+  <div class="inner-wrap">
 
-<!-- <div class="row">
-  <div class="small-2 columns">
-    
-  </div> -->
+    <a class="left-off-canvas-toggle" href="#"><i class="fi-list"></i></a>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+      
+      <div class="icon-bar vertical five-up">
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Home</label>
+      </a>
+      <a class="item">
+       <i class="fi-home"></i>
+        <label>Bookmark</label>
+      </a>
+<!--       <a class="item">
+        <i class="fi-home"></i>
+        <label>Info</label>
+      </a>
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Mail</label>
+      </a>
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Like</label>
+      </a> -->
+    </div>
+      
+    </aside>
+
+
+<br><br><br><br>
+
   <div class="small-12 columns">
 
     <form id="search-term">
@@ -49,14 +70,36 @@
       </div>
     </form>
     <br><br>
-  <!--   <div id="search-results"></div>
+    <!-- <div id="search-results"></div>
     <div id="top-tracks-results"></div> -->
   </div>
 
+<div class="row resultList">
+  <!-- <div class="large-2 colums"></div> -->
+  <div class="small-12 colums">
+    <div id="search-results"></div>
+    <div id="top-tracks-results">
+      <div class="row header">
+        <div class="small-4 columns">
+         <h5>Song</h5>
+        </div> 
+        <div class="small-4 columns">
+         <h5>Album</h5>
+        </div> 
+        <div class="small-2 columns">
+         <h5>Preview</h5>
+        </div> 
+        <div class="small-2 columns">
+         <h5>Full Song</h5>
+    </div> 
+  </div>
 
-  <div id="search-results"></div>
-    <div id="top-tracks-results"></div>
 
+
+    </div>
+  </div>
+  <!-- <div class="large-2 colums"></div> -->
+</div>
 <!-- </div> -->
 
 <br><br><br>
@@ -66,8 +109,9 @@
 
 
 <!-- FROM STACKOVERFLOW REP BUILDER -->
+<!-- =====  FIRST PASS  ===== -->
 
-<div class="templates hidden">
+<!-- <div class="templates hidden">
     <dl class="artistResults">
       <dt>Artist</dt>
         <dd class="artistName"><a href="" target="_blank"></a></dd>
@@ -78,28 +122,67 @@
         <dd class="song"></dd>
       <dt>Album</dt>
         <dd class="album"></dd>
-      <dt>Song Preview</dt>
+      <dt></dt>
         <dd class="preview"><a href=""></a></dd>
-      <dt>Full Song (requires Spotify login)</dt>
+      <dt></dt>
         <dd class="fullSong"><a href=""></a></dd>
     </dl>
-    
+</div> -->
 
-    <!-- Probably won't need this -->
-    <!-- New template for the Top Answers functionality -->
-    <dl class="result topAnswers">
-      <dt>User</dt>
-        <dd class="user"><a href="" target="_blank"></a></dd>
-                <dd><a href="" target="_blank"></a></dd>
-      <dt>Post Count</dt>
-        <dd class="post-count"></dd>
-      <dt>Score</dt>
-        <dd class="score"></dd>
+<!-- =====  ALTERNATIVE TO DL/DT TAGS  ===== -->
+<!-- =====  Not sure I like this  ===== -->
+
+<!--  <div class="templates hidden">
+    <dl class="artistResults">
+      <dt>Artist</dt>
+        <dd class="artistName"><a href="" target="_blank"></a></dd>
     </dl>
-    <div class="error">
-      <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+
+    <ul class="topTracks">
+      <li><h5>Song:</h5></li>
+      <li class="song"><p>Song:</p></li>
+      <li><h5>Album:</h5></li>
+      <li class="album"><p></p></li>
+      <li class="preview"><a href=""></a></li>
+      <li class="fullSong"><a href=""></a></li>
+    </ul>
+</div>  
+ -->
+
+<!-- ====== USING GRID ======= -->
+
+<div class="templates hidden">
+  <!-- <div class="row header">
+    <div class="small-4 columns">
+     <h3>Song</h3>
+    </div> 
+    <div class="small-4 columns">
+     <h3>Album</h3>
+    </div> 
+    <div class="small-2 columns">
+     <h3>Preview</h3>
+    </div> 
+    <div class="small-2 columns">
+     <h3>Full Song</h3>
+    </div> 
+  </div> -->
+
+  <div class="row topTracks">
+    
+    <div class="small-4 columns song">     
     </div>
+    <div class="small-4 columns album">     
+    </div>
+    <div class="small-2 columns preview"><a href=""></a></div>
+    <div class="small-2 columns fullSong"><a href=""></a></div>
   </div>
+</div>  
+
+
+
+
+
+    
 
 <!-- FROM STACKOVERFLOW REP BUILDER -->
 

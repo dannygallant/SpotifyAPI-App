@@ -155,6 +155,40 @@ innerText: "↵ Song↵ Ain't No Sunshine featuring Tracy Chapman↵ Album↵ [o
 
 
 
+<link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+
+<div class="off-canvas-wrap move-right" data-offcanvas>
+  <div class="inner-wrap">
+
+    <a class="left-off-canvas-toggle" href="#"><i class="fi-list"></i></a>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+      
+      <div class="icon-bar vertical five-up">
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Home</label>
+      </a>
+      <a class="item">
+       <i class="fi-home"></i>
+        <label>Bookmark</label>
+      </a>
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Info</label>
+      </a>
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Mail</label>
+      </a>
+      <a class="item">
+        <i class="fi-home"></i>
+        <label>Like</label>
+      </a>
+    </div>
+      
+    </aside>
 
 
 

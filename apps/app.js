@@ -20,6 +20,20 @@ $("#serch-results").on("click", "#topTracksButton", function(event) {
 
 });  // ==== Opening 'ready' function ====
 
+function sideNav() {
+  if ($(window).width() < 769) {
+    $('.off-canvas-wrap').removeClass('move-right');
+    $('.left-off-canvas-toggle').show();
+  } else {
+    $('.off-canvas-wrap').addClass('move-right');
+    $('.left-off-canvas-toggle').hide();
+  }  
+}
+
+$(window).resize(function() {
+  sideNav();
+});
+
 
 var spotifyData;
 
@@ -77,6 +91,7 @@ function showResults(results) {
       for (var i = 0; i < data.tracks.length; i++) {
       var trackInfo = showTopTracks(data.tracks[i]);
       console.log('TrackInfo', trackInfo);
+        $('.header').css('display', 'inline');
         $('#top-tracks-results').append(trackInfo);
     }
 
@@ -132,11 +147,11 @@ function showTopTracks(track) {
 
   var preview = result.find('.preview a')
   .attr('href', track.preview_url)
-    .text("Song Preview");
+    .text("Preview");
 
   var fullsong = result.find('.fullSong a')
   .attr('href', track.external_urls.spotify)
-    .text("Full song");
+    .text("Song");
 
   return result;
   // $('.top-tracks-results').html(result);
@@ -146,6 +161,7 @@ function showTopTracks(track) {
 
 // return result;
 };   // end of showTopTracks
+
 
 
 

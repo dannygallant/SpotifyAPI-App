@@ -1,7 +1,7 @@
 /* =========  Foundation CSS overides  ========= */
 
 body {
-  background: #fff;
+  background: #000000;
   /*background-image: url("../img/Background_small.png");*/
   background-repeat: no-repeat;
   color: #222;
@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  position: relative; }
+  position: relative;}
 
 .th {
   border: none;
@@ -34,11 +34,75 @@ button:hover, .button:hover {
 	background-color: black;
 }
 
-
 /* ========= Nav bar styling ========= */
 
+.inner-wrap {
+  width: auto; }
+
+.move-right .inner-wrap {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  margin-left: 114px; }
+
+.left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  position: fixed;
+  width: 0;
+  height: 100%; }
+
+.move-right .left-off-canvas-menu {
+  width: 114px; }
+
+.move-right .exit-off-canvas {
+  display: none; }
+
+.left-off-canvas-toggle {
+  display: none;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: #333;
+  transition: all .25s ease-in-out; }
+  .left-off-canvas-toggle:focus {
+    color: #333; }
+  .left-off-canvas-toggle:hover {
+    color: #8c8c8c;
+    transition: all .25s ease-in-out; }
+
+.ad-block {
+  margin-bottom: 2rem; }
 
 /* ==== Main styling ==== */
+
+a {
+  color: white;
+}
+
+h5 {
+  color: white;
+}
+
+#sidebar {
+  background-color: #615F5F;
+}
+
+dt {
+  display: block;
+}
+
+
+.href {
+  color: red;
+}
 
 .container {
   margin: 3em auto;
@@ -46,6 +110,10 @@ button:hover, .button:hover {
 }
 
 .hidden {
+  display: none;
+}
+
+.header {
   display: none;
 }
 
