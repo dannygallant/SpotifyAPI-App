@@ -42,6 +42,15 @@
     </aside>
 
 
+<!-- No Top Tracks modal -->
+<div id="noTopTracksModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h3 id="modalTitle">No top tracks for this artist</h3>
+    <h6 class="lead">Spotify does not have any top tracks for this artist, or combination of artists. Please select again.</h6>
+    <p>Spotify does not have any top tracks for this artist, or combination of artists. Please select again.</p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+
 <h1 class="heading">Spotify Top Tracks Search</h1>
 <h3 class="heading">Search for your favorite artist's top 10 tracks - based on Spotify plays</h3>
 
@@ -54,7 +63,7 @@
             <input type="text" id="query" required placeholder="Search">
           </div>
           <div class="small-2 columns">              
-            <a href="#" id="searchButton" class="button postfix">Submit</a>
+            <a href="#" id="searchButton" class="button postfix">Search</a>
           </div>
         </div>        
       </div>
@@ -63,6 +72,7 @@
 
 
 <div class="row resultList">  
+    <div id="search-results-heading"></div>    
     <div id="search-results"></div>
     <div id="top-tracks-results">
       <div class="row header">
@@ -84,15 +94,12 @@
 <br><br><br>
 
 
-
-<!-- ====== USING GRID ======= -->
-
 <div class="templates hidden">
   <div class="row topTracks">
     <div class="small-5 columns song"></div>
     <div class="small-5 columns album"></div>
-    <div class="small-1 columns preview"><a href=""></a></div>
-    <div class="small-1 columns fullSong"><a href=""></a></div>
+    <div class="small-1 columns preview"><a href="" target="_blank"></div>
+    <div class="small-1 columns fullSong"><a href="" target="_blank"></a></div>
   </div>
 </div>  
 

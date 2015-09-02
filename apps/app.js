@@ -72,6 +72,7 @@ function showResults(results) {
       console.log(value.name);
       console.log(value.id);
       // console.log(tempo);
+      $("#search-results-heading").html("<p><strong>Select an artist from the list.</strong></p>");
       $("#search-results").html(html);
   });
       // =====  This calls the getTopTracks function when a link is clicked, passing it the artist id (value.id) that is held in the link.  =====
@@ -80,6 +81,7 @@ function showResults(results) {
       $('a[class=Tops]').click(function(e) {
         key = $(this).data('num'); // gets data-caption attribute value
         $("#search-results").empty();
+         $("#search-results-heading").html("");
         getTopTracks(key);
         });
 
@@ -98,6 +100,12 @@ function showResults(results) {
     type: "GET",
     }).done(function(data){
       console.log('AJAX:', data);
+      
+
+      if (data.tracks.length == 0) {
+          console.log(data.tracks.length);
+          $("#noTopTracksModal").foundation('reveal', 'open');
+      }
     
       for (var i = 0; i < data.tracks.length; i++) {
       var trackInfo = showTopTracks(data.tracks[i]);
@@ -112,7 +120,8 @@ function showResults(results) {
 }
 
 function showTopTracks(track) {
-  console.log("ShowTop", track);
+
+ 
   
   var result = $('.templates .topTracks').clone();
 
@@ -124,11 +133,11 @@ function showTopTracks(track) {
 
   var preview = result.find('.preview a')
   .attr('href', track.preview_url)
-    .text("Preview");
+  .text("Preview");
 
   var fullsong = result.find('.fullSong a')
   .attr('href', track.external_urls.spotify)
-    .text("Song");
+  .text("Song");
 
   return result;
 
