@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Spotify Artist Search</title>
 	<link rel="stylesheet" href="css/normalize.css" />
-  	<link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/foundation.css" />
     <!-- app.css is used to overide styling from foundation.css -->
-  	<link rel="stylesheet" href="css/app.css">
-    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/app.css">
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
     
 </head>
 
@@ -25,79 +25,72 @@
     <!-- Off Canvas Menu -->
     <aside class="left-off-canvas-menu">
       
-      <div class="icon-bar vertical five-up">
-      <a class="item">
-        <i class="fi-home"></i>
-        <label>Home</label>
-      </a>
-      <a class="item">
-       <i class="fi-home"></i>
-        <label>Bookmark</label>
-      </a>
-<!--       <a class="item">
-        <i class="fi-home"></i>
-        <label>Info</label>
-      </a>
-      <a class="item">
-        <i class="fi-home"></i>
-        <label>Mail</label>
-      </a>
-      <a class="item">
-        <i class="fi-home"></i>
-        <label>Like</label>
-      </a> -->
-    </div>
+      <div class="icon-bar vertical two-up">
+        <a class="item resetSearch">
+          <i class="fi-home"></i>
+          <label>Reset</label>
+        </a>
+        <a class="item" href="mailto:danny.gallant@att.net" target="_top">
+          <i class="fi-home"></i>
+          <!-- <a href="mailto:danny.gallant@att.net" target="_top"></a> -->
+          <label>Contact</label>
+        </a>
+      </div>
       
     </aside>
 
 
+<h1 class="heading">Spotify Top Tracks Search</h1>
+<h3 class="heading">Search for your favorite artists' top 10 tracks - based on Spotify plays</h3>
+
 <br><br><br><br>
 
-  <div class="small-12 columns">
+  <!-- <div class="small-12 columns"> -->
 
     <form id="search-term">
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="row collapse">
-            <div class="small-10 columns">
-              <input type="text" id="query" required placeholder="Search">
-            </div>
-            <div class="small-2 columns">
-              <a href="#" id="searchButton" class="button postfix">Submit</a>
-            </div>
+      <div class="row">        
+        <div class="row collapse postfix-round">
+          <div class="small-10 columns">
+            <input type="text" id="query" required placeholder="Search">
           </div>
-        </div>
+          <div class="small-2 columns">              
+            <a href="#" id="searchButton" class="button postfix">Submit</a>
+          </div>
+        </div>        
       </div>
     </form>
     <br><br>
+
+
+  
+
+
+
+
     <!-- <div id="search-results"></div>
     <div id="top-tracks-results"></div> -->
-  </div>
+  <!-- </div> -->
 
 <div class="row resultList">
   <!-- <div class="large-2 colums"></div> -->
-  <div class="small-12 colums">
+  <!-- <div class="small-12 colums"> -->
     <div id="search-results"></div>
     <div id="top-tracks-results">
       <div class="row header">
-        <div class="small-4 columns">
+        <div class="small-5 columns">
          <h5>Song</h5>
         </div> 
-        <div class="small-4 columns">
+        <div class="small-5 columns">
          <h5>Album</h5>
         </div> 
-        <div class="small-2 columns">
+        <div class="small-1 columns">
          <h5>Preview</h5>
         </div> 
-        <div class="small-2 columns">
-         <h5>Full Song</h5>
-    </div> 
-  </div>
-
-
-
+        <div class="small-1 columns">
+         <h5>Complete</h5>
+    <!-- </div>  -->
+        </div>
     </div>
-  </div>
   <!-- <div class="large-2 colums"></div> -->
 </div>
 <!-- </div> -->
@@ -169,12 +162,12 @@
 
   <div class="row topTracks">
     
-    <div class="small-4 columns song">     
+    <div class="small-5 columns song">     
     </div>
-    <div class="small-4 columns album">     
+    <div class="small-5 columns album">     
     </div>
-    <div class="small-2 columns preview"><a href=""></a></div>
-    <div class="small-2 columns fullSong"><a href=""></a></div>
+    <div class="small-1 columns preview"><a href=""></a></div>
+    <div class="small-1 columns fullSong"><a href=""></a></div>
   </div>
 </div>  
 

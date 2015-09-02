@@ -2,12 +2,14 @@ $(document).ready(function(){
 
 $("#search-term").submit(function(event) {
 	event.preventDefault();
+  // $(".resultList").css("display", "none");
 	var searchTerm = $("#query").val();
 	getRequest(searchTerm); 
   	});
 
 $("#search-term").on("click", "#searchButton", function(event) {
   event.preventDefault();
+  // $(".resultList").css("display", "none");
   var searchTerm = $("#query").val();
   getRequest(searchTerm); 
     });
@@ -34,6 +36,10 @@ $(window).resize(function() {
   sideNav();
 });
 
+$(".resetSearch").click(function() {
+    location.reload();
+});
+
 
 var spotifyData;
 
@@ -54,6 +60,7 @@ function getRequest(searchTerm) {
 function showResults(results) {
 	var html = "";
   // var temp;
+
 
   $.each(results, function(index,value){
       // var tempo = value.id;
