@@ -2,14 +2,12 @@ $(document).ready(function(){
 
 $("#search-term").submit(function(event) {
 	event.preventDefault();
-  // $(".resultList").css("display", "none");
 	var searchTerm = $("#query").val();
 	getRequest(searchTerm); 
   	});
 
 $("#search-term").on("click", "#searchButton", function(event) {
   event.preventDefault();
-  // $(".resultList").css("display", "none");
   var searchTerm = $("#query").val();
   getRequest(searchTerm); 
     });
@@ -44,23 +42,29 @@ $(".resetSearch").click(function() {
 var spotifyData;
 
 function getRequest(searchTerm) {
-  var params = {
-    q: 'artist:' +searchTerm,
-    type: 'artist'
-  };
+ 
   url = 'https://api.spotify.com/v1/search';
 
-  $.getJSON(url, params, function(data){
-    spotifyData = data;  // May not use this variable
-    console.log(spotifyData);
+  $.ajax({
+    url: url,
+    data: {
+      q: 'artist:' +searchTerm,
+      type: 'artist'
+    },
+    dataType: "json",
+    type: "GET",
+    }).done(function(data){
     showResults(data.artists.items);
-  });
+    }).fail(function() {
+        alert("There was an error obtaining your search. Please check spelling and try againg.");
+    })
+
+
+
 }  // end of getResults
 
 function showResults(results) {
 	var html = "";
-  // var temp;
-
 
   $.each(results, function(index,value){
       // var tempo = value.id;
@@ -85,7 +89,7 @@ function showResults(results) {
 // $(function() {
   function getTopTracks(artistId) {
     console.log(artistId);
-  // var topList = $('a').data(ID);  
+
   var url = 'https://api.spotify.com/v1/artists/' + artistId + '/top-tracks?country=US';
 
   $.ajax({
@@ -102,48 +106,14 @@ function showResults(results) {
         $('#top-tracks-results').append(trackInfo);
     }
 
-      
     }).fail(function() {
-      console.log('Error!');
+      alert('There was an error obtaining this artist"s tracks. Please try again');
     });
 }
 
-
-//  ====  THIS WORKS ! ======
-  // $.getJSON(url, function(data){
-    // console.log(data);
-    // showTopTracks(data);
-//  ====  THIS WORKS ! ======
-
-  // for (var i = 0; i < data.tracks.length; i++) {
-
-  //       var trackInfo = showTopTracks(data.tracks[i]);
-  //       // $('.results').append(trackInfo);
-  //   }
-
-  // $.each(data.tracks, function(i, item) {
-  //       var trackInfo = showTopTracks(item);
-  //       $('.results').append(trackInfo);
-
-
-
-  // });
-// });    ====  PUT THIS BACK ??  ==
-//    };  // end of getTopTracks
- // });   // end of unamed function
-
-
-
 function showTopTracks(track) {
   console.log("ShowTop", track);
-  // console.log(track.tracks.length);
-
-  // for (var i = 0; i < track.tracks.length; i++) {
-
-        // var trackInfo = showTopTracks(data.tracks[i]);
-        // // $('.results').append(trackInfo);
-    
-
+  
   var result = $('.templates .topTracks').clone();
 
   var song = result.find('.song');
@@ -161,12 +131,7 @@ function showTopTracks(track) {
     .text("Song");
 
   return result;
-  // $('.top-tracks-results').html(result);
 
-// }
-// console.log(song);
-
-// return result;
 };   // end of showTopTracks
 
 

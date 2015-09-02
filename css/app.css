@@ -88,6 +88,15 @@ background:#333;
 
 /* ==== Main styling ==== */
 
+p {
+  color: white;
+}
+
+#copyright {
+  color: black;
+  font-size: 14px;
+}
+
 .heading {
   color: white;
   text-align: center;
